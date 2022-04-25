@@ -17,7 +17,12 @@ class TraineeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'firstName' => $this->faker->firstName(),
+            'lastName' => $this->faker->lastName(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'phone' => $this->faker->phoneNumber(),
+            'bio' => $this->faker->sentence(4),
+            'profile' => $this->faker->image(),
         ];
     }
 }
