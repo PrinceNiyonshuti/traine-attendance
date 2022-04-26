@@ -9,6 +9,7 @@ before starting to run the project
 ## Resources
 - php v8 or later
 - composer v2.3.5 or later
+- mysql database
 
 ### Requirements
 
