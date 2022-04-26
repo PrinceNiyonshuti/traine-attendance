@@ -7,7 +7,8 @@ Trainee Attendance tracking is a way to keep track of Trainee attendance and abs
 before starting to run the project
 
 ## Resources
-- php V8 or later
+- php v8 or later
+- composer v2.3.5 or later
 
 ### Requirements
 
