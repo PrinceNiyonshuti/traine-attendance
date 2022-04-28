@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('trainees', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->text('fistName');
+            $table->text('firstName');
             $table->text('lastName');
             $table->text('email');
             $table->text('phone');
             $table->longText('bio');
             $table->text('profile');
+            $table->timestamps();
+
         });
     }
 
