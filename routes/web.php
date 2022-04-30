@@ -24,3 +24,7 @@ Route::get('/register', function () {
 Route::get('/forgot', function () {
     return view('forgot');
 });
+
+Route::get('/mentor', function () {
+    return view('/mentor/index');
+});
