@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('leaves', function (Blueprint $table) {
             $table->id();
-            $table->text(' ');
-            $table->boolean('leaveStatus')->default(0);
+            $table->text('leaveName');
+            $table->integer('leaveStatus')->default(0);
             $table->timestamps();
         });
     }
