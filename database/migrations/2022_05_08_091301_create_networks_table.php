@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text('networkName');
             $table->text('networkAddress');
-            $table->boolean('networkStatus')->default(0);
+            $table->integer('networkStatus')->default(0);
             $table->timestamps();
         });
     }
