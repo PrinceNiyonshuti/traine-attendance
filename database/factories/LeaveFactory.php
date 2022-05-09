@@ -17,7 +17,8 @@ class LeaveFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'leaveName' => $this->faker->firstName(),
+            'leaveStatus' => $this->faker->boolean(),
         ];
     }
 }
