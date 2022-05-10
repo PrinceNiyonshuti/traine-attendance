@@ -28,3 +28,7 @@ Route::get('/forgot', function () {
 Route::get('/mentor', function () {
     return view('/mentor/index');
 });
+
+Route::get('/trainnes', function () {
+    return view('/mentor/trainnes');
+});
