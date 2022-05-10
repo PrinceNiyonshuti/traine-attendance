@@ -29,6 +29,6 @@ Route::get('/mentor', function () {
     return view('/mentor/index');
 });
 
-Route::get('/trainnes', function () {
+Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');
 });
