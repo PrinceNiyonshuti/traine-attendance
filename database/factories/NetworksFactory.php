@@ -18,6 +18,9 @@ class NetworksFactory extends Factory
     {
         return [
             //
+            'networkName' => $this->faker->firstName(),
+            'networkAddress' => $this->faker->ipv4(),
+            'networkStatus' => $this->faker->boolean(),
         ];
     }
 }
