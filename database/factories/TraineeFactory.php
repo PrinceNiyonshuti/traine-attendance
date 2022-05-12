@@ -23,6 +23,7 @@ class TraineeFactory extends Factory
             'phone' => $this->faker->phoneNumber(),
             'bio' => $this->faker->sentence(7),
             'profile' => $this->faker->image(),
+            'devStack' => $this->faker->sentence(10),
         ];
     }
 }
