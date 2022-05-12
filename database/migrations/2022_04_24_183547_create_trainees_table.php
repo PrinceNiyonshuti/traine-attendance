@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('phone');
             $table->longText('bio');
             $table->text('profile');
+            $table->text('devStack');
             $table->timestamps();
 
         });
