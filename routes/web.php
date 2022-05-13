@@ -36,3 +36,7 @@ Route::get('/allTrainnes', function () {
 Route::get('/allAttendance', function () {
     return view('/mentor/attendance');
 });
+
+Route::get('/networks', function () {
+    return view('/mentor/networks');
+});
