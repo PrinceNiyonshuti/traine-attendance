@@ -37,6 +37,10 @@ Route::get('/allAttendance', function () {
     return view('/mentor/attendance');
 });
 
+Route::get('/mentor/settings', function () {
+    return view('/mentor/settings');
+});
+
 Route::get('/networks', function () {
     return view('/mentor/networks');
 });
