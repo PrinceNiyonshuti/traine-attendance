@@ -18,6 +18,11 @@ class LeavePermissionFactory extends Factory
     {
         return [
             //
+            'trainee_id' => $this->faker->random_int(),
+            'leave_id' => $this->faker->random_int(),
+            'briefing' => $this->faker->sentence(7),
+            'comment' => $this->faker->sentence(7),
+            'leaveStatus' => $this->faker->boolean(),
         ];
     }
 }
