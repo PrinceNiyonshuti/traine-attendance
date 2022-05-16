@@ -22,7 +22,7 @@ class TraineeFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'phone' => $this->faker->phoneNumber(),
             'bio' => $this->faker->sentence(7),
-            'profile' => $this->faker->image(),
+            'profile' => $this->faker->imageUrl($width = 200, $height = 200),
             'devStack' => $this->faker->sentence(10),
         ];
     }
