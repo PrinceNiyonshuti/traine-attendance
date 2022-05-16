@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('leave_permissions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('trainee_id');
+            $table->foreignId('leave_id');
+            $table->text('briefing')->nullable();
+            $table->text('comment')->nullable();
+            $table->integer('leaveStatus')->default(0);
             $table->timestamps();
         });
     }
