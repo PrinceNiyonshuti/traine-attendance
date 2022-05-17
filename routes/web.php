@@ -45,7 +45,6 @@ Route::get('/networks', function () {
     return view('/mentor/networks');
 });
 
-
 Route::get('/notifications', function () {
     return view('/mentor/notifications');
 });

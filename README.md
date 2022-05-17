@@ -3,15 +3,13 @@
 Trainee Attendance tracking is a way to keep track of Trainee attendance and absenteeism. It's used to record employee work hours (their productivity and overtime) and plan and allocate their off times.
 and Trainees can be able to ask for a leave or other certain permission , and the mentor can approve or deny them , the system can generate report of attendance and other reports
 
-## Documentation
-
-before starting to run the project
-
 ## Resources
 - php v8 or later
 - composer v2.3.5 or later
 - mysql database
+## Documentation
 
+before starting to run the project
 ### Requirements
 
 -   create your .env file
