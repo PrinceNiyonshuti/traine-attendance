@@ -30,7 +30,7 @@ before starting to run the project
 
 Any issue and feedback from the app don't hesitate to make an issue
 
-# Contributors
+# Contributor
 
 | [<img src="https://github.com/PrinceNiyonshuti.png" width="100px;"><br><sub><b>Niyonshuti Prince</b></sub>](https://github.com/PrinceNiyonshuti) |
 | :------------------------------------------------------------------------------------------------------------------------ |
