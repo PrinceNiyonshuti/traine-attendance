@@ -48,3 +48,10 @@ Route::get('/networks', function () {
 Route::get('/notifications', function () {
     return view('/mentor/notifications');
 });
+
+
+// Trainee
+
+Route::get('/trainee', function () {
+    return view('/trainee/index');
+});
