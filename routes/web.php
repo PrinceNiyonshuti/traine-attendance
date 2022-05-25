@@ -55,3 +55,6 @@ Route::get('/notifications', function () {
 Route::get('/trainee', function () {
     return view('/trainee/index');
 });
+Route::get('/trainee', function () {
+    return view('/trainee/attendance');
+});
