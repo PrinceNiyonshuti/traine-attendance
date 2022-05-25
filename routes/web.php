@@ -63,3 +63,7 @@ Route::get('/trainee', function () {
 Route::get('/trainee', function () {
     return view('/trainee/permission');
 });
+
+Route::get('/trainee', function () {
+    return view('/trainee/settings');
+});
