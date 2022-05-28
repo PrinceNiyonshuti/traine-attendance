@@ -25,6 +25,10 @@ Route::get('/forgot', function () {
     return view('forgot');
 });
 
+Route::get('/reset', function () {
+    return view('reset');
+});
+
 Route::get('/mentor', function () {
     return view('/mentor/index');
 });
