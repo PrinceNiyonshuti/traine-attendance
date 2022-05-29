@@ -58,6 +58,11 @@ Route::get('/notifications', function () {
 });
 
 
+Route::get('/logs', function () {
+    return view('/mentor/logs');
+});
+
+
 // Trainee
 
 Route::get('/trainee', function () {
