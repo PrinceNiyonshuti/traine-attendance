@@ -29,6 +29,10 @@ Route::get('/reset', function () {
     return view('reset');
 });
 
+Route::get('/activateAccount', function () {
+    return view('activate');
+});
+
 Route::get('/mentor', function () {
     return view('/mentor/index');
 });
