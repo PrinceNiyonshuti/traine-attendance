@@ -83,3 +83,7 @@ Route::get('/trainee', function () {
 Route::get('/trainee', function () {
     return view('/trainee/settings');
 });
+
+Route::get('/notifications', function () {
+    return view('/trainee/notifications');
+});
