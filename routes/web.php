@@ -57,6 +57,10 @@ Route::get('/notifications', function () {
     return view('/mentor/notifications');
 });
 
+Route::get('/permissions', function () {
+    return view('/mentor/permissions');
+});
+
 Route::get('/logs', function () {
     return view('/mentor/logs');
 });
