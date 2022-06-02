@@ -96,6 +96,6 @@ Route::get('/traineeNotifications', function () {
     return view('/trainee/notifications');
 });
 
-Route::get('/trainee', function () {
+Route::get('/traineeProfile', function () {
     return view('/trainee/profile');
 });
