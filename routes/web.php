@@ -88,7 +88,7 @@ Route::get('/traineePermission', function () {
     return view('/trainee/permission');
 });
 
-Route::get('/trainee', function () {
+Route::get('/traineeSettings', function () {
     return view('/trainee/settings');
 });
 
