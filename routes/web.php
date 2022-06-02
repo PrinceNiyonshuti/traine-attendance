@@ -95,3 +95,7 @@ Route::get('/traineeSettings', function () {
 Route::get('/traineeNotifications', function () {
     return view('/trainee/notifications');
 });
+
+Route::get('/trainee', function () {
+    return view('/trainee/profile');
+});
