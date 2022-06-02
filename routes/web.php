@@ -84,7 +84,7 @@ Route::get('/traineeAttendance', function () {
     return view('/trainee/attendance');
 });
 
-Route::get('/trainee', function () {
+Route::get('/traineePermission', function () {
     return view('/trainee/permission');
 });
 
