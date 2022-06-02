@@ -99,3 +99,7 @@ Route::get('/traineeNotifications', function () {
 Route::get('/traineeProfile', function () {
     return view('/trainee/profile');
 });
+
+Route::get('/trainee', function () {
+    return view('/trainee/networks');
+});
