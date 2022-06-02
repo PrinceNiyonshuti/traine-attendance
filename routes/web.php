@@ -100,6 +100,6 @@ Route::get('/traineeProfile', function () {
     return view('/trainee/profile');
 });
 
-Route::get('/trainee', function () {
+Route::get('/allowedNetworks', function () {
     return view('/trainee/networks');
 });
