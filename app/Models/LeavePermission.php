@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class LeavePermission extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [];
 }
