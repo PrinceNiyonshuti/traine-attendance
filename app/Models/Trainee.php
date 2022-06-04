@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Trainee extends Authenticatable
 {
-    use HasFactory , Notifiable;
+    use HasApiTokens , HasFactory , Notifiable;
 
     /**
      * The attributes that should be hidden for serialization.
