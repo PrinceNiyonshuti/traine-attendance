@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Trainee extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory , Notifiable;
 
     /**
      * The attributes that should be hidden for serialization.
