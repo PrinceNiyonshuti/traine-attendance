@@ -18,6 +18,8 @@ class AttendanceFactory extends Factory
     {
         return [
             //
+            'trainee_id' => $this->faker->randomDigit(),
+            'status' => $this->faker->boolean(),
         ];
     }
 }
