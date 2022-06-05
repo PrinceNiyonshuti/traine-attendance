@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('trainee_id');
             $table->timestamps();
         });
     }
