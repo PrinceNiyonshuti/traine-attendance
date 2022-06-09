@@ -29,4 +29,13 @@ class Attendance extends Model
      * @var array<string, string>
      */
     protected $casts = [ ];
+
+
+    /**
+     * Get the trainee the leave permission belongs to.
+     */
+    public function attendedTrainee()
+    {
+        return $this->belongsTo(Trainee::class);
+    }
 }
