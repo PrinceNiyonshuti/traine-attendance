@@ -29,4 +29,12 @@ class LeavePermission extends Model
      * @var array<string, string>
      */
     protected $casts = [];
+
+    /**
+     * Get the user that owns the phone.
+     */
+    public function leave()
+    {
+        return $this->belongsTo(Leave::class, 'foreign_key');
+    }
 }
