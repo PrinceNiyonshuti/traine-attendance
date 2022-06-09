@@ -39,4 +39,12 @@ class Attendance extends Model
         return $this->belongsTo(Trainee::class);
     }
 
+    /**
+     * Get the attended trainee the attendance records belongs to.
+     */
+    public function network()
+    {
+        return $this->belongsTo(Networks::class);
+    }
+
 }
