@@ -32,10 +32,11 @@ class Attendance extends Model
 
 
     /**
-     * Get the attended trainee the leave permission belongs to.
+     * Get the attended trainee the attendance records belongs to.
      */
     public function attendedTrainee()
     {
         return $this->belongsTo(Trainee::class);
     }
+
 }
