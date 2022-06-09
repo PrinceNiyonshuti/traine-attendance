@@ -39,7 +39,7 @@ class LeavePermission extends Model
     }
 
     /**
-     * Get the leave category the leave permission belongs to.
+     * Get the trainee the leave permission belongs to.
      */
     public function trainee()
     {
