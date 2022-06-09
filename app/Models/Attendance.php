@@ -32,7 +32,7 @@ class Attendance extends Model
 
 
     /**
-     * Get the trainee the leave permission belongs to.
+     * Get the attended trainee the leave permission belongs to.
      */
     public function attendedTrainee()
     {
