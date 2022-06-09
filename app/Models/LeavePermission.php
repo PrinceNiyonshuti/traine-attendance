@@ -31,7 +31,7 @@ class LeavePermission extends Model
     protected $casts = [];
 
     /**
-     * Get the user that owns the phone.
+     * Get the leave category the leave permission belongs to.
      */
     public function leave()
     {
