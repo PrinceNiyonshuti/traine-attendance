@@ -35,6 +35,14 @@ class LeavePermission extends Model
      */
     public function leave()
     {
-        return $this->belongsTo(Leave::class, 'foreign_key');
+        return $this->belongsTo(Leave::class);
+    }
+
+    /**
+     * Get the leave category the leave permission belongs to.
+     */
+    public function trainee()
+    {
+        return $this->belongsTo(Trainee::class);
     }
 }
