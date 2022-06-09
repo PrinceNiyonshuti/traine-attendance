@@ -40,7 +40,7 @@ class Attendance extends Model
     }
 
     /**
-     * Get the attended trainee the attendance records belongs to.
+     * Get the attendance records networks thats belongs to.
      */
     public function network()
     {
