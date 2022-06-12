@@ -16,5 +16,7 @@ class RoleSeeder extends Seeder
     public function run()
     {
         //
+        Schema::disableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
     }
 }
