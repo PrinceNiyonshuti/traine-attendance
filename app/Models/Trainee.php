@@ -11,6 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 class Trainee extends Authenticatable
 {
     use HasApiTokens , HasFactory , Notifiable;
+    protected $guard = 'trainee';
 
     /**
      * The attributes that are mass assignable.
