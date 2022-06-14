@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <form>
+    <form method="POST" action="/login">
         @csrf
         <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
             <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
@@ -35,11 +35,17 @@
                             </h1>
                             <label class="block text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Email</span>
-                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Jane Doe" />
+                                <input type="email" name="email" id="email" value="{{ old('email') }}" placeholder="Enter your email" required class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
+                                @error('email')
+                                <p class=" text-xs mt-1" style="color: red;">{{ $message }}</p>
+                                @enderror
                             </label>
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Password</span>
-                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="***************" type="password" />
+                                <input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="***************" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
+                                @error('password')
+                                <p class=" text-xs mt-1" style="color: red;">{{ $message }}</p>
+                                @enderror
                             </label>
 
                             <!-- You should use a button here, as the anchor is only used for the example  -->
