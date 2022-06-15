@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('lastName')->nullable();
             $table->text('email');
             $table->text('phone')->nullable();
-            $table->longText('bio');
+            $table->longText('bio')->nullable();
             $table->text('profile');
             $table->text('devStack');
             $table->timestamp('email_verified_at')->nullable();
