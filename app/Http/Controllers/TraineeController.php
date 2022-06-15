@@ -36,6 +36,26 @@ class TraineeController extends Controller
     public function store(Request $request)
     {
         //
+        $attributes = $request->validate([
+                'names' => 'required|min:5|max:100',
+                'username' => 'required|min:5|unique:users',
+                'email' => 'required|email|unique:users,email',
+                'phone_1' => 'required|unique:users|min:7|max:12',
+                'department_id' => 'required|exists:departments,id',
+                'password' => 'required|confirmed|min:7|max:255',
+            ]);
+        $attributes['nid'] = $request->nid;
+        $attributes['phone_2'] = $request->phone_2;
+        $attributes['level_id'] = 2;
+        $attributes['staff_role'] = 1;
+        $attributes['status'] = 'Active';
+        $attributes['password'] = bcrypt($attributes['password']);
+        $admin = Trainee::create($attributes);
+        if ($admin) {
+            return back()->with('success', 'Province Admin saved !');
+        } else {
+            return back()->with('success', 'Something went Wrong .');
+        }
     }
 
     /**

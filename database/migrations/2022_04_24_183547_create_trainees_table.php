@@ -22,6 +22,9 @@ return new class extends Migration
             $table->longText('bio');
             $table->text('profile');
             $table->text('devStack');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
 
         });
