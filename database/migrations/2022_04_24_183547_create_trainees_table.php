@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('phone')->nullable();
             $table->longText('bio')->nullable();
             $table->text('profile')->nullable();
-            $table->text('devStack');
+            $table->text('devStack')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
