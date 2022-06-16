@@ -37,11 +37,7 @@ class TraineeController extends Controller
     {
         //
         $attributes = $request->validate([
-                'names' => 'required|min:5|max:100',
-                'username' => 'required|min:5|unique:users',
                 'email' => 'required|email|unique:users,email',
-                'phone_1' => 'required|unique:users|min:7|max:12',
-                'department_id' => 'required|exists:departments,id',
                 'password' => 'required|confirmed|min:7|max:255',
             ]);
         $attributes['nid'] = $request->nid;

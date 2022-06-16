@@ -24,6 +24,7 @@ return new class extends Migration
             $table->text('devStack')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('status');
             $table->rememberToken();
             $table->timestamps();
 
