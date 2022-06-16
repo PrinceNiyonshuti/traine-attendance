@@ -37,18 +37,14 @@ class TraineeController extends Controller
     {
         //
         $attributes = $request->validate([
-                'email' => 'required|email|unique:users,email',
-                'password' => 'required|confirmed|min:7|max:255',
-            ]);
-        $attributes['nid'] = $request->nid;
-        $attributes['phone_2'] = $request->phone_2;
-        $attributes['level_id'] = 2;
-        $attributes['staff_role'] = 1;
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|confirmed|min:7|max:255',
+        ]);
         $attributes['status'] = 'true';
         $attributes['password'] = bcrypt($attributes['password']);
         $admin = Trainee::create($attributes);
         if ($admin) {
-            return back()->with('success', 'Province Admin saved !');
+            return back()->with('success', 'Account Created Successfully');
         } else {
             return back()->with('success', 'Something went Wrong .');
         }
