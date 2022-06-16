@@ -44,7 +44,7 @@ class TraineeController extends Controller
         $attributes['phone_2'] = $request->phone_2;
         $attributes['level_id'] = 2;
         $attributes['staff_role'] = 1;
-        $attributes['status'] = 'Active';
+        $attributes['status'] = 'true';
         $attributes['password'] = bcrypt($attributes['password']);
         $admin = Trainee::create($attributes);
         if ($admin) {
