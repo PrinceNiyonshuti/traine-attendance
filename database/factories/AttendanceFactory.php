@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Networks;
 use App\Models\Trainee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,7 +21,7 @@ class AttendanceFactory extends Factory
         return [
             //
             'trainee_id' => Trainee::all()->random()->id,
-            'network_id' => $this->faker->randomDigit(),
+            'network_id' => Networks::all()->random()->id,
             'status' => $this->faker->boolean(),
         ];
     }
