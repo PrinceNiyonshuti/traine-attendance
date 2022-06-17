@@ -35,12 +35,16 @@
                             </h1>
                             <label class="block text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">New Password</span>
-                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="New Password" />
+                                <input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="***************" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
+                                @error('password')
+                                <p class=" text-xs mt-1" style="color: red;">{{ $message }}</p>
+                                @enderror
                             </label>
-
-                            <label class="block text-sm">
-                                <span class="text-gray-700 dark:text-gray-400">Confirm Password</span>
-                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Confirm Password" />
+                            <label class="block mt-4 text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">
+                                    Confirm password
+                                </span>
+                                <input type="password" name="confirm-password" id="confirm-password" placeholder="***************" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
                             </label>
 
                             <!-- You should use a button here, as the anchor is only used for the example  -->
