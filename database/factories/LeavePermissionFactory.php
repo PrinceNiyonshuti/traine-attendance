@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Trainee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,7 @@ class LeavePermissionFactory extends Factory
     {
         return [
             //
-            'trainee_id' => $this->faker->randomDigit(),
+            'trainee_id' => Trainee::all()->random()->id,
             'leave_id' => $this->faker->randomDigit(),
             'briefing' => $this->faker->sentence(7),
             'comment' => $this->faker->sentence(7),
