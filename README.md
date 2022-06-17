@@ -14,6 +14,7 @@ before starting to run the project
 
 -   create your .env file
 -   create your database
+-   seed the database
 
 ### after run these script
 
