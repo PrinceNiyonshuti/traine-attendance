@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TraineeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,8 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::post('/login', [TraineeController::class, 'login'])->middleware('guest');
 
 Route::get('/forgot', function () {
     return view('forgot');
