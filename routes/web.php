@@ -14,11 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-// Trainee registration
-Route::get('/login', [TraineeController::class, 'create'])->middleware('guest');
+
+// Authentication
+Route::get('/', [TraineeController::class, 'create'])->middleware('guest');
+Route::post('/login', [TraineeController::class, 'store'])->middleware('guest');
 
 // Trainee registration
 Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');
