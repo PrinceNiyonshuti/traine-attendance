@@ -42,7 +42,7 @@ class TraineeController extends Controller
             'email' => 'required|email|unique:trainees,email',
             'password' => 'required|confirmed|min:7|max:255',
         ]);
-        $attributes['status'] = 'true';
+        $attributes['status'] = 1;
         $attributes['password'] = bcrypt($attributes['password']);
         $admin = Trainee::create($attributes);
         if ($admin) {
