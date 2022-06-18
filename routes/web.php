@@ -18,12 +18,9 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
-
+// Trainee registration
 Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');
-Route::post('/register', [TraineeController::class, 'store'])->middleware('guest');
+Route::post('/trainee/new-account', [TraineeController::class, 'store'])->middleware('guest');
 
 Route::get('/forgot', function () {
     return view('forgot');
