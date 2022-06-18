@@ -22,7 +22,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::post('/register', [TraineeController::class, 'create'])->middleware('guest');
+Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');
 Route::post('/register', [TraineeController::class, 'store'])->middleware('guest');
 
 Route::get('/forgot', function () {
