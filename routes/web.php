@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
+// Trainee registration
+Route::get('/login', [TraineeController::class, 'create'])->middleware('guest');
 
 // Trainee registration
 Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');
