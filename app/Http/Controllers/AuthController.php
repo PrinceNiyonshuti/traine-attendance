@@ -12,4 +12,11 @@ class AuthController extends Controller
         //
         return view('login');
     }
+
+    // Authentication function
+    public function store(Request $request)
+    {
+        //
+        dd($request);
+    }
 }

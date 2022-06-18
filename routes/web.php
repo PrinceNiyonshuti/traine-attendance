@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TraineeController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 
 // Authentication
-Route::get('/', [TraineeController::class, 'create'])->middleware('guest');
-Route::post('/login', [TraineeController::class, 'store'])->middleware('guest');
+Route::get('/', [AuthController::class, 'create'])->middleware('guest');
+Route::post('/login', [AuthController::class, 'store'])->middleware('guest');
 
 // Trainee registration
 Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');

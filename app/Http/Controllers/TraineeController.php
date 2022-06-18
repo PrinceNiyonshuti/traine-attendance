@@ -37,7 +37,6 @@ class TraineeController extends Controller
     public function store(Request $request)
     {
         //
-        // dd($request);
         $attributes = $request->validate([
             'email' => 'required|email|unique:trainees,email',
             'password' => 'required|confirmed|min:7|max:255',
