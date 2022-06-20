@@ -16,7 +16,10 @@ class AuthController extends Controller
     // Authentication function
     public function store(Request $request)
     {
-        //
-        dd($request);
+        // validate the request
+        $attributes = request()->validate([
+            'email' => 'required|email|exists:users,email',
+            'password' => 'required'
+        ]);
     }
 }
