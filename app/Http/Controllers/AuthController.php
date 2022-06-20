@@ -21,5 +21,10 @@ class AuthController extends Controller
             'email' => 'required|email|exists:users,email',
             'password' => 'required'
         ]);
+        // attempt to authenticate and log in the user
+        if (auth()->attempt($attributes)) {
+            // create new session
+            session()->regenerate();
+        }
     }
 }
