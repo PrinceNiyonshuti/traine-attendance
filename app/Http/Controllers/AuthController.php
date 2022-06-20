@@ -25,6 +25,8 @@ class AuthController extends Controller
         if (auth()->attempt($attributes)) {
             // create new session
             session()->regenerate();
+            // redirect to home page
+            return redirect('/')->with('success', 'welcome back !');
         }
     }
 }
