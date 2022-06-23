@@ -8,6 +8,7 @@ and Trainees can be able to ask for a leave or other certain permission , and th
 - composer v2.3.5 or later
 - mysql database
 - Mail Account
+- Xampp or Apache server
 ## Documentation
 
 before starting to run the project
