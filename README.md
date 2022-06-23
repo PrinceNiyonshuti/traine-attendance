@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="#" width="400">
+</p>
+
 ## Trainee Attendance
 
 Trainee Attendance tracking is a way to keep track of Trainee attendance and absenteeism. It's used to record employee work hours (their productivity and overtime) and plan and allocate their off times.
