@@ -19,7 +19,6 @@ class TraineeFactory extends Factory
         return [
             'firstName' => $this->faker->firstName(),
             'lastName' => $this->faker->lastName(),
-            'email' => $this->faker->unique()->safeEmail(),
             'phone' => $this->faker->phoneNumber(),
             'bio' => $this->faker->sentence(7),
             'profile' => $this->faker->imageUrl($width = 200, $height = 200),
