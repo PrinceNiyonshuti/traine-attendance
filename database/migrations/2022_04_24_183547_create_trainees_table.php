@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->text('firstName')->nullable();
             $table->text('lastName')->nullable();
-            $table->text('email');
             $table->text('phone')->nullable();
             $table->longText('bio')->nullable();
             $table->text('profile')->nullable();
