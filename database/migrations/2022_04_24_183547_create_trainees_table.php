@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('trainees', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->text('firstName')->nullable();
             $table->text('lastName')->nullable();
             $table->text('phone')->nullable();
