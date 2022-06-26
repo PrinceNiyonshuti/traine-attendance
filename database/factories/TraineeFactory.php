@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,6 +18,7 @@ class TraineeFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => User::all()->random()->id,
             'firstName' => $this->faker->firstName(),
             'lastName' => $this->faker->lastName(),
             'phone' => $this->faker->phoneNumber(),
