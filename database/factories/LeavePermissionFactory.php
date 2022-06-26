@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Leave;
 use App\Models\Trainee;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,7 @@ class LeavePermissionFactory extends Factory
     {
         return [
             //
-            'trainee_id' => Trainee::all()->random()->id,
+            'user_id' => User::all()->random()->id,
             'leave_id' => Leave::all()->random()->id,
             'briefing' => $this->faker->sentence(7),
             'comment' => $this->faker->sentence(7),
