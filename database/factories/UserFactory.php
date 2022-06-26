@@ -19,7 +19,7 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => "Super admin",
+            'username' => "Super admin",
             'role_id' => Role::all()->random()->id,
             'email' => "admin@gmail.com",
             'email_verified_at' => now(),
