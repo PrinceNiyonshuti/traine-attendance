@@ -26,7 +26,7 @@ class AuthController extends Controller
             // create new session
             session()->regenerate();
             // redirect to home page
-            return redirect('/')->with('success', 'welcome back !');
+            return redirect('/mentor')->with('success', 'welcome back !');
         }
     }
 }

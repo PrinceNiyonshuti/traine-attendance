@@ -26,16 +26,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-        //
-        // Trainee Guard
-        Gate::define('trainee', function (Trainee $user) {
-            return $user?->level_id == '1';
-        });
-
-        // Mentor Guard
-        Gate::define('mentor', function (User $user) {
-            return $user?->level_id == '1';
-        });
     }
 }
