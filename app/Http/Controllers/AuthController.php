@@ -29,4 +29,10 @@ class AuthController extends Controller
             return redirect('/mentor')->with('success', 'welcome back !');
         }
     }
+
+    public function destroy()
+    {
+        auth()->logout();
+        return redirect('/')->with('success', 'See you soon !');
+    }
 }
