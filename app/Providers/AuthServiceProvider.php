@@ -26,5 +26,11 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        // Mentor Guard
+        Gate::define('mentor', function (User $user) {
+            return $user?->role_id == '1';
+        });
     }
+
 }
