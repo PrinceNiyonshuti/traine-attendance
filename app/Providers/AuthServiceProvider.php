@@ -31,6 +31,11 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('mentor', function (User $user) {
             return $user?->role_id == '1';
         });
+
+        // Trainee Guard
+        Gate::define('trainee', function (User $user) {
+            return $user?->role_id == '2';
+        });
     }
 
 }
