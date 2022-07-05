@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 
 // Authentication
-Route::get('/', [AuthController::class, 'create'])->middleware('guest');
+Route::get('/', [AuthController::class, 'create'])->middleware('guest')->name('/login');
 Route::post('/login', [AuthController::class, 'store'])->middleware('guest');
+Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth');
 
 // Trainee registration
 Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');
@@ -38,7 +39,7 @@ Route::get('/activateAccount', function () {
 
 Route::get('/mentor', function () {
     return view('/mentor/index');
-});
+})->middleware('auth');
 
 Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');

@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class IsTrainee
 {
@@ -16,6 +17,10 @@ class IsTrainee
      */
     public function handle(Request $request, Closure $next)
     {
+        if (auth()->user()?->level_id != '2') {
+            abort(Response::HTTP_FORBIDDEN);
+            // return redirect('/forgot');
+        }
         return $next($request);
     }
 }
