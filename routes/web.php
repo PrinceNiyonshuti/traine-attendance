@@ -73,8 +73,8 @@ Route::get('/report', function () {
     return view('/mentor/report');
 });
 
-Route::get('/profile-mentor', function () {
-    return view('/mentor/profile');
+Route::get('/profile', function () {
+    return view('/components/profile');
 });
 
 
