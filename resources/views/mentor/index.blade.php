@@ -132,7 +132,7 @@
                 </div>
                 <div>
                     <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        Pending Trainees
+                        Pending Permissions
                     </p>
                     <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
                         35
