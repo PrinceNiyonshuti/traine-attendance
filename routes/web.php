@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\TraineeController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,9 +38,10 @@ Route::get('/activateAccount', function () {
     return view('activate');
 });
 
-Route::get('/mentor', function () {
-    return view('/mentor/index');
-})->middleware('auth');
+Route::post('/mentor', [Dashboard::class, 'dashboard'])->middleware('auth');
+// Route::get('/mentor', function () {
+//     return view('/mentor/index');
+// })->middleware('auth');
 
 Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');
