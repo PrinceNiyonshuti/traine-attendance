@@ -12,10 +12,10 @@ class Dashboard extends Controller
         # code...
         if (auth()->user()?->level_id == '1') {
             # code...
-            return view('dashboard.dashboard');
+            return view('/mentor/index');
         } else {
             # code...
-            return view('dashboard.dashboard_trainee');
+            return view('/mentor/index');
         }
     }
 }

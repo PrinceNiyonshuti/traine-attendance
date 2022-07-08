@@ -38,7 +38,7 @@ Route::get('/activateAccount', function () {
     return view('activate');
 });
 
-Route::post('/mentor', [Dashboard::class, 'dashboard'])->middleware('auth');
+Route::get('/mentor', [Dashboard::class, 'dashboard'])->middleware('auth');
 // Route::get('/mentor', function () {
 //     return view('/mentor/index');
 // })->middleware('auth');
