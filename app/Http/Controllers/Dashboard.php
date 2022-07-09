@@ -13,6 +13,7 @@ class Dashboard extends Controller
         $trainees = User::where('role_id','=','2')->count();
         $activeTrainees = User::where('role_id','=','2')->count();
         $attendance = User::where('role_id','=','2')->count();
+        $permissions = User::where('role_id','=','2')->count();
         $analytics = [$trainees];
         return view(
             '/mentor/index',
