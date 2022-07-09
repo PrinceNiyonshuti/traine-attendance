@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\LeavePermission;
-use App\Models\Trainee;
 use App\Models\User;
+use App\Models\Trainee;
+use App\Models\Attendance;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use App\Models\LeavePermission;
 
 class Dashboard extends Controller
 {
@@ -14,7 +16,7 @@ class Dashboard extends Controller
     {
         $trainees = Trainee::count();
         $activeTrainees = Trainee::where('status','=','1')->count();
-        $attendance = User::where('role_id','=','2')->count();
+        $attendance = Attendance::whereDate('created_at', Carbon::today())->count();
         $permissions = LeavePermission::where('leaveStatus','=','1')->count();
         $analytics = [$trainees,$activeTrainees,$attendance,$permissions];
         return view(
