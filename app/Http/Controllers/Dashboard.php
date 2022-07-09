@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Trainee;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,7 @@ class Dashboard extends Controller
     //
     public function dashboard()
     {
-        $trainees = User::where('role_id','=','2')->count();
+        $trainees = Trainee::count();
         $activeTrainees = User::where('role_id','=','2')->count();
         $attendance = User::where('role_id','=','2')->count();
         $permissions = User::where('role_id','=','2')->count();
