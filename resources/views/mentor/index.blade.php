@@ -34,7 +34,7 @@
                         Active Trainees
                     </p>
                     <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        $ 46,760.89
+                        {{$analytics[1]}}
                     </p>
                 </div>
             </div>
@@ -47,10 +47,10 @@
                 </div>
                 <div>
                     <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        Atendance
+                        Attendance
                     </p>
                     <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        376
+                        {{$analytics[2]}}
                     </p>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         Permissions
                     </p>
                     <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        35
+                        {{$analytics[3]}}
                     </p>
                 </div>
             </div>
