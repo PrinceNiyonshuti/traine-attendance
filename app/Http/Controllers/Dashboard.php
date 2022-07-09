@@ -12,7 +12,7 @@ class Dashboard extends Controller
     public function dashboard()
     {
         $trainees = Trainee::count();
-        $activeTrainees = User::where('role_id','=','2')->count();
+        $activeTrainees = Trainee::where('status','=','1')->count();
         $attendance = User::where('role_id','=','2')->count();
         $permissions = User::where('role_id','=','2')->count();
         $analytics = [$trainees,$activeTrainees,$attendance,$permissions];
