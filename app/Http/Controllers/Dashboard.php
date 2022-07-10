@@ -22,7 +22,7 @@ class Dashboard extends Controller
         $analytics = [$trainees,$activeTrainees,$attendance,$permissions];
         return view(
             '/mentor/index',
-            ["analytics" => $analytics,]
+            ["analytics" => $analytics,'trainees'=>$allTrainees]
         );
     }
 }
