@@ -167,7 +167,7 @@
                                         <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                     </div>
                                     <div>
-                                        <p class="font-semibold">Hans Burger</p>
+                                        <p class="font-semibold">{{ $trainee->firstName }} {{ $trainee->lastName }}</p>
                                         <p class="text-xs text-gray-600 dark:text-gray-400">
                                             10x Developer
                                         </p>
