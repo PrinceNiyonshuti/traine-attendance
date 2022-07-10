@@ -191,7 +191,7 @@
 
                             </td>
                             <td class="px-4 py-3 text-sm">
-                                6/10/2020
+                                {{ $trainee->created_at }}
                             </td>
                         </tr>
                         @endforeach
