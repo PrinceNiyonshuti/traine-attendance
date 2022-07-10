@@ -169,7 +169,7 @@
                                     <div>
                                         <p class="font-semibold">{{ $trainee->firstName }} {{ $trainee->lastName }}</p>
                                         <p class="text-xs text-gray-600 dark:text-gray-400">
-                                            10x Developer
+                                            {{ $trainee->phone }}
                                         </p>
                                     </div>
                                 </div>
