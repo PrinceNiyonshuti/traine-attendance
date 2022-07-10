@@ -15,13 +15,14 @@ class Dashboard extends Controller
     public function dashboard()
     {
         $trainees = Trainee::count();
+        $allTrainees = Trainee::get();
         $activeTrainees = Trainee::where('status','=','1')->count();
         $attendance = Attendance::whereDate('created_at', Carbon::today())->count();
         $permissions = LeavePermission::where('leaveStatus','=','1')->count();
         $analytics = [$trainees,$activeTrainees,$attendance,$permissions];
         return view(
             '/mentor/index',
-            ["analytics" => $analytics]
+            ["analytics" => $analytics,]
         );
     }
 }
