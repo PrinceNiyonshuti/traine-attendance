@@ -153,7 +153,7 @@
                             <th class="px-4 py-3">Trainees</th>
                             <th class="px-4 py-3">Stack</th>
                             <th class="px-4 py-3">Status</th>
-                            <th class="px-4 py-3">Date</th>
+                            <th class="px-4 py-3">Joined Date</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
