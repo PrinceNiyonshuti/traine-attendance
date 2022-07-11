@@ -44,6 +44,8 @@ Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');
 });
 
+Route::get('/allTrainnes',[TraineeController::class, 'index']);
+
 Route::get('/allAttendance', function () {
     return view('/mentor/attendance');
 });
