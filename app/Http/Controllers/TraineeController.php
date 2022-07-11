@@ -15,6 +15,8 @@ class TraineeController extends Controller
     public function index()
     {
         //
+        $allTrainees = Trainee::get();
+        return view('/mentor/trainnes', ['trainees' => $allTrainees]);
     }
 
     /**
