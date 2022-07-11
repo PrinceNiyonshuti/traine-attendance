@@ -39,9 +39,6 @@ Route::get('/activateAccount', function () {
 });
 
 Route::get('/mentor', [Dashboard::class, 'dashboard'])->middleware('auth');
-// Route::get('/mentor', function () {
-//     return view('/mentor/index');
-// })->middleware('auth');
 
 Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');
