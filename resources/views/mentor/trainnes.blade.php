@@ -12,7 +12,7 @@
                             <th class="px-4 py-3">Info</th>
                             <th class="px-4 py-3">Stack</th>
                             <th class="px-4 py-3">Status</th>
-                            <th class="px-4 py-3">Date</th>
+                            <th class="px-4 py-3">Joined Date</th>
                             <th class="px-4 py-3">Actions</th>
                         </tr>
                     </thead>
