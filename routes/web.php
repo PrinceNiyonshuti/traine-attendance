@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\TraineeController;
+use App\Models\Networks;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +41,16 @@ Route::get('/activateAccount', function () {
 
 Route::get('/mentor', [Dashboard::class, 'dashboard'])->middleware('auth');
 
+Route::get('/networks', function () {
+    return view('/mentor/networks');
+});
+
+Route::get('/networks', [Networks::class, 'index'])->middleware('auth');
+
+Route::get('/networks', function () {
+    return view('/mentor/networks');
+});
+
 Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');
 });
@@ -54,9 +65,7 @@ Route::get('/mentorSettings', function () {
     return view('/mentor/settings');
 });
 
-Route::get('/networks', function () {
-    return view('/mentor/networks');
-});
+
 
 Route::get('/notifications', function () {
     return view('/mentor/notifications');
