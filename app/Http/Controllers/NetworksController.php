@@ -15,6 +15,7 @@ class NetworksController extends Controller
     public function index()
     {
         //
+        $networks = Networks::get();
     }
 
     /**

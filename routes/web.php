@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\NetworksController;
 use App\Http\Controllers\TraineeController;
 use App\Models\Networks;
 use Illuminate\Support\Facades\Route;
@@ -45,7 +46,7 @@ Route::get('/networks', function () {
     return view('/mentor/networks');
 });
 
-Route::get('/networks', [Networks::class, 'index'])->middleware('auth');
+Route::get('/networks', [NetworksController::class, 'index'])->middleware('auth');
 
 Route::get('/networks', function () {
     return view('/mentor/networks');
