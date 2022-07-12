@@ -48,10 +48,6 @@ Route::get('/networks', function () {
 
 Route::get('/networks', [NetworksController::class, 'index'])->middleware('auth');
 
-Route::get('/networks', function () {
-    return view('/mentor/networks');
-});
-
 Route::get('/allTrainnes', function () {
     return view('/mentor/trainnes');
 });
