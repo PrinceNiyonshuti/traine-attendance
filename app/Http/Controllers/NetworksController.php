@@ -16,6 +16,7 @@ class NetworksController extends Controller
     {
         //
         $networks = Networks::get();
+        return view('/mentor/networks', ['networks' => $networks]);
     }
 
     /**
