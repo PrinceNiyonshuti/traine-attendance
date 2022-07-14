@@ -13,8 +13,10 @@ and Trainees can be able to ask for a leave or other certain permission , and th
 - mysql database
 - Mail Account
 - Xampp or Apache server
+
 ## Documentation
 before starting to run the project you have to follow the procedures
+
 ### Requirements
 
 -   create your .env file
