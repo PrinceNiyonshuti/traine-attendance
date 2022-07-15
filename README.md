@@ -9,8 +9,6 @@ and Trainees can be able to ask for a leave or other certain permission , and th
 
 ## Flow Chart
 
-
-
 ## Resources to have
 - php v8 or later
 - composer v2.3.5 or later
