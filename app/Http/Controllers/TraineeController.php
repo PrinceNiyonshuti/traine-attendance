@@ -15,7 +15,7 @@ class TraineeController extends Controller
     public function index()
     {
         //
-        $allTrainees = Trainee::get();
+        $allTrainees = Trainee::latest()->paginate(5);
         return view('/mentor/trainnes', ['trainees' => $allTrainees]);
     }
 
