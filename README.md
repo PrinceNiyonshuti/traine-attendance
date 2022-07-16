@@ -25,7 +25,7 @@ before starting to run the project you have to follow the procedures
 -   create your database
 -   seed the database
 
-### after run these script
+## after run these script
 
     Run composer install
     Run cp .env.example .env or copy .env.example .env
