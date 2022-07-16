@@ -19,7 +19,7 @@ and Trainees can be able to ask for a leave or other certain permission , and th
 ## Documentation
 before starting to run the project you have to follow the procedures
 
-### Requirements
+## Requirements
 
 -   create your .env file
 -   create your database
