@@ -37,7 +37,18 @@ class NetworksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //save new network
+        $attributes = request()->validate([
+            'networkName' => 'required|email|exists:networks,networkName',
+            'networkAddress' => 'required|ipv4',
+        ]);
+        $attributes['networkStatus'] = 0;
+        $network = Networks::create($attributes);
+        if ($network) {
+            return back()->with('success', 'Network Created Successfully');
+        } else {
+            return back()->with('success', 'Something went Wrong .');
+        }
     }
 
     /**
