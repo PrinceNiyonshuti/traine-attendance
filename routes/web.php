@@ -28,9 +28,8 @@ Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth');
 Route::get('/register', [TraineeController::class, 'create'])->middleware('guest');
 Route::post('/trainee/new-account', [TraineeController::class, 'store'])->middleware('guest');
 
-Route::get('/forgot', function () {
-    return view('forgot');
-});
+Route::get('/forgot',[AuthController::class, 'forgot'])->middleware('guest');
+Route::get('/reset',[AuthController::class, 'reset'])->middleware('guest');
 
 Route::get('/reset', function () {
     return view('reset');
