@@ -36,8 +36,8 @@ class AuthController extends Controller
         return redirect('/')->with('success', 'See you soon !');
     }
 
-    public function forgot()
+    public function forgot(Request $request)
     {
-        dd('forgot');
+        dd($request->all());
     }
 }
