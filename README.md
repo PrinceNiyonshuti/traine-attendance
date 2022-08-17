@@ -16,6 +16,7 @@ before starting to run the project you have to follow the procedures
 
 ## Requirements
 
+-   Php Version 8 or later
 -   create your .env file
 -   create your database
 -   seed the database
