@@ -24,6 +24,7 @@ before starting to run the project you have to follow the procedures
 ## after run these script
 
     composer install
+    composer update
     cp .env.example .env or copy .env.example .env
     php artisan key:generate
     php artisan migrate
