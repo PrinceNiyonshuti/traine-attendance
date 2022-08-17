@@ -28,8 +28,6 @@ before starting to run the project you have to follow the procedures
     Run php artisan key:generate
     Run php artisan migrate
     Run php artisan db:seed
-    or
-    Run php artisan migrate:fresh --seed
     Run php artisan storage:link
 
 ## Feedback and issues
