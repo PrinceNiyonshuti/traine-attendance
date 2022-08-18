@@ -1,6 +1,8 @@
 
 ## Trainee Attendance
 
+![image](https://user-images.githubusercontent.com/46887030/185408544-d3fd5cc3-088f-48d0-9961-7f1e4454b313.png)
+
 Trainee Attendance tracking is a way to keep track of Trainee attendance and absenteeism. It's used to record employee work hours (their productivity and overtime) and plan and allocate their off times.
 and Trainees can be able to ask for a leave or other certain permission , and the mentor can approve or deny them , the system can generate report of attendance and other reports .
 
