@@ -38,6 +38,7 @@ class AuthController extends Controller
 
     public function forgot(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+        return view('forgot');
     }
 }
