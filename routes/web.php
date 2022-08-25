@@ -39,7 +39,7 @@ Route::get('/activateAccount', function () {
     return view('activate');
 });
 
-Route::get('/mentor', [Dashboard::class, 'dashboard'])->middleware('auth');
+Route::get('/dashboard', [Dashboard::class, 'dashboard'])->middleware('auth');
 
 Route::get('/networks', function () {
     return view('/mentor/networks');

@@ -21,7 +21,7 @@ class Dashboard extends Controller
         $permissions = LeavePermission::where('leaveStatus','=','1')->count();
         $analytics = [$trainees,$activeTrainees,$attendance,$permissions];
         return view(
-            '/mentor/index',
+            '/dashboard/index',
             ["analytics" => $analytics,'trainees'=>$allTrainees]
         );
     }
