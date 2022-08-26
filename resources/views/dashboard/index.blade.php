@@ -5,11 +5,9 @@
         </h2>
         @can('mentor')
         <!-- Mentor Cards -->
-        <x-mentorDashboard />
         <!-- Mentor Cards -->
         @elsecan('trainee')
         <!-- Trainee Cards -->
-        <x-traineeDashboard />
         <!-- Trainee Cards -->
         @endcan
         <!-- New Table -->
