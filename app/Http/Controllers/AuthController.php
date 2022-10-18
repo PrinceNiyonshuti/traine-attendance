@@ -41,4 +41,10 @@ class AuthController extends Controller
         // dd($request->all());
         return view('forgot');
     }
+
+    public function sendPasswordRecover(Request $request)
+    {
+        // dd($request->all());
+        return view('reset');
+    }
 }
