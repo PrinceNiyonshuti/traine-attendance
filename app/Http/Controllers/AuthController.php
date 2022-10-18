@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -38,7 +42,18 @@ class AuthController extends Controller
 
     public function forgot(Request $request)
     {
-        // dd($request->all());
         return view('forgot');
+    }
+
+    public function sendPasswordRecover(Request $request)
+    {
+        $attributes = request()->validate([
+            'email' => 'required|email|exists:users,email'
+        ]);
+        $user = User::where('email', $attributes['email'])->first();
+        $user->password = Hash::make(Str::random(8));
+        $user->save();
+        Mail::to($user->email)->send(new PasswordRecover($user));
+        return redirect('/')->with('success', 'Password has been sent to your email !');
     }
 }
