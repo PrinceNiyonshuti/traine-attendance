@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Notifications\PasswordReset;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Support\Facades\Notification;
 class AuthController extends Controller
 {
     //
@@ -51,9 +50,11 @@ class AuthController extends Controller
             'email' => 'required|email|exists:users,email'
         ]);
         $user = User::where('email', $attributes['email'])->first();
-        $user->password = Hash::make(Str::random(8));
-        $user->save();
-        Mail::to($user->email)->send(new PasswordRecover($user));
-        return redirect('/')->with('success', 'Password has been sent to your email !');
+        $activationCode = random_int(100000, 999999);
+        $token = Str::random(64);
+
+        Notification::route('mail', $user->email)->notify(new PasswordReset($token, $activationCode));
+        
+        return back()->with('success', 'Check your email for the password reset code');
     }
 }
