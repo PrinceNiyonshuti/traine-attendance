@@ -5,7 +5,7 @@ You are receiving this email because we received a password reset request for yo
 
 Your Password Reset code is : {{$activationCode}}
 
-@component('mail::button', ['url' => route('password.reset' ,$token)])
+@component('mail::button', ['url' => ''])
 Reset Password
 @endcomponent
 
@@ -17,5 +17,5 @@ Regards,<br>
 {{ config('app.name') }}
 
 <hr>
-<font size="2">If you’re having trouble clicking the "Reset Password" button, copy and paste the URL below into your web browser: <a href="{{route('password.reset',$token)}}">{{route('password.reset',$token)}}</a></font>
+<font size="2">If you’re having trouble clicking the "Reset Password" button, copy and paste the URL below into your web browser: <a href=""></a></font>
 @endcomponent

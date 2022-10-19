@@ -16,9 +16,14 @@ class PasswordReset extends Notification
      *
      * @return void
      */
-    public function __construct()
+
+    public $token;
+    public $activationCode;
+
+    public function __construct($token, $activationCode)
     {
-        //
+        $this->token = $token;
+        $this->activationCode = $activationCode;
     }
 
     /**
@@ -41,9 +46,8 @@ class PasswordReset extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('Password Reset')
+            ->markdown('emails.reset-password-email', ['token' => $this->token, 'activationCode' => $this->activationCode]);
     }
 
     /**
