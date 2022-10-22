@@ -36,7 +36,7 @@
                             </h1>
                             @if (session('success'))
                             <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" id="alert">
-                                <span class="font-medium">Success</span> {{ session('success') }}.
+                                {{ session('success') }}.
                             </div>
                             @endif
                             <label class="block text-sm">
