@@ -30,6 +30,10 @@ class AuthController extends Controller
             session()->regenerate();
             // redirect to home page
             return redirect('/dashboard')->with('success', 'welcome back !');
+        }else{
+            return back()->withErrors([
+                'email' => 'Your provided credentials could not be verified.'
+            ]);
         }
     }
 
@@ -54,7 +58,7 @@ class AuthController extends Controller
         $token = Str::random(64);
 
         Notification::route('mail', $user->email)->notify(new PasswordReset($token, $activationCode));
-        
+
         return back()->with('success', 'Check your email for the password reset code');
     }
 }
